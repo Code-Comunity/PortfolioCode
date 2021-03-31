@@ -1,0 +1,49 @@
+import styled from 'styled-components'
+
+export const NavContainer = styled.div`
+    width: 100vw;
+    height: 40px;
+    position: fixed;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+export const NavContent = styled.div`
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+export const NavLeft = styled.div`
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    
+`
+export const NavRight = styled.div`
+    height: 100%;
+    width: 40%;
+    text-decoration: none;
+    color: #000;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a{
+        font-size: 16px;
+        text-decoration: none;
+        color: #000;
+        
+
+        :hover{
+            color:  ${props => props.theme.colors.primary};
+        }
+    }
+`
