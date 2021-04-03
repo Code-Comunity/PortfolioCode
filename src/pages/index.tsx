@@ -10,7 +10,7 @@ const Index: React.FC = () => {
   const Router = useRouter()
   const [count, setCount] = useState(10)
 
-
+  //Contagem regressiva + redireecionamento
   const Regressive = setInterval(
     function Counter(){
       setCount(count - 1)

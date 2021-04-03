@@ -1,13 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
+import Head from 'next/head'
 
 import BannerImg from '../assets/banner.png'
-import Nav from '../styles/components/NavComp'
+import Nav from '../components/NavComp'
 import { Container, Content } from '../styles/pages/HomeStyled'
 
 const Home: React.FC = () => {
     return(
         <>   
+            <Head>
+                <title>Início</title>
+            </Head>
             <Nav />
             <Container>
             <Content>

@@ -5,6 +5,9 @@ export const NavContainer = styled.div`
     height: 40px;
     position: fixed;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    background-color: ${props => props.theme.colors.background};
+
+    z-index: 200;
 
     display: flex;
     justify-content: center;

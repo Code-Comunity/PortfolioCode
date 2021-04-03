@@ -2,9 +2,9 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image'
 
-import Logo from '../../assets/Logo.png'
+import Logo from '../assets/Logo.png'
 
-import { NavContainer, NavContent, NavLeft, NavRight } from './NavStyled'
+import { NavContainer, NavContent, NavLeft, NavRight } from '../styles/components/NavStyled'
 
 const Nav: React.FC = () => {
     return(
@@ -21,8 +21,8 @@ const Nav: React.FC = () => {
                     </NavLeft>
                     <NavRight>
                         <Link href="/Home" >Início</Link>
-                        <Link href="/" >Habilidades</Link>
-                        <Link href="/" >Trabalhos</Link>
+                        <Link href="/Habilidades" >Habilidades</Link>
+                        <Link href="/Trabalhos" >Trabalhos</Link>
                         <Link href="/" >Sobre</Link>
                     </NavRight>
                 </NavContent>
