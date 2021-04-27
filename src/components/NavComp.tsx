@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Logo from '../assets/Logo.png'
 
 import { NavContainer, NavContent, NavLeft, NavRight } from '../styles/components/NavStyled'
+import Burger from './BurgerComp'
 
 const Nav: React.FC = () => {
     return(
@@ -25,6 +26,7 @@ const Nav: React.FC = () => {
                         <Link href="/Trabalhos" >Trabalhos</Link>
                         <Link href="/" >Sobre</Link>
                     </NavRight>
+                    <Burger />
                 </NavContent>
             </NavContainer>
         </>

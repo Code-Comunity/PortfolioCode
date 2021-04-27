@@ -1,14 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import Nav from '../components/NavComp'
 
 import { Container } from '../styles/pages/HomeStyled'
 import { Content, Service, ServiceHover } from '../styles/pages/TrabalhosStyled'
 
-import ImgRight1 from '../assets/1.png'
-import ImgLeft1 from '../assets/2.png'
+import Button from '../components/buttonComp'
 
 const Trabalhos: React.FC = () => {
     return(
@@ -25,7 +25,7 @@ const Trabalhos: React.FC = () => {
                          <p>Logo</p>
                         <ServiceHover>
                             <h1>Logo</h1>
-                            <h1>Logo</h1>
+                            <Link href='/ProvisorioTrabalho' ><Button  /></Link>     
                         </ServiceHover>     
                     </Service>
                 </Content>

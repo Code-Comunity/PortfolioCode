@@ -48,5 +48,10 @@ export const NavRight = styled.div`
         :hover{
             color:  ${props => props.theme.colors.primary};
         }
+        
+        @media(max-width: 768px){
+            display: none;
+        }
     }
+
 `

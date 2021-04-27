@@ -25,7 +25,7 @@ const Index: React.FC = () => {
   return (
     <Container>
       <Head>
-        Home
+        <title>Home</title>
       </Head>
       <Logo />
       <h1>CodeComunity</h1>
