@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
-const Ul = styled.ul`
+const Ul = styled.ul<{open: boolean}>`
   list-style: none;
   display: none;
   flex-flow: row nowrap;
