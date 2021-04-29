@@ -1,22 +1,57 @@
-import { Container} from '../styles/pages/HomeStyled'
-import { Content } from '../styles/pages/LinkTrabalhosStyled'
+import { Container} from '../../styles/pages/HomeStyled'
+import { Content } from '../../styles/pages/LinkTrabalhosStyled'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
-import Nav from '../components/NavComp'
+import Nav from '../../components/NavComp'
 import Image from 'next/image'
 
-import Img1 from '../assets/teste.png' 
+import Img1 from '../../assets/teste.png' 
 
-const InfoTrabalho: React.FC = () => {
+interface IPost{
+    props: {
+        post: string,
+    }
+}
+
+export const getStaticPaths: GetStaticPaths  = async () => {
+    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/allPosts`)
+    const data = await response.json()
+
+    const paths = data.map((post: { _id: any }) => ({ params: { id: post._id }, }))
+
+    return { paths, fallback: true }
+}
+
+
+export const getStaticProps: GetStaticProps = async () => {
+
+    const response = await fetch('https://portfolio-codecommunity.herokuapp.com/api/allPosts')
+    const data = await response.json();
+    
+    console.log(data)
+  
+    return {
+      props: {
+        post: data,
+      },
+      revalidate: 30,
+    }
+}
+
+
+
+const InfoTrabalho: React.FC<{post:any}>  = ({ post }) => {
     return(
         <>
             <Nav />
             <Container>
+            {post.map((e: any): JSX.Element => (
                 <Content>
                     <h1>Justificativa</h1>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <p>{e.description}</p>
 
                     <h1>Descrição do Projeto</h1>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <p>{e.justification}</p>
 
                     <h1>Protótipo/Prints</h1>
 
@@ -48,6 +83,7 @@ const InfoTrabalho: React.FC = () => {
                     </span>
                     
                 </Content>
+                ))}
             </Container>
         </>
     )

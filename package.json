@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",

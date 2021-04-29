@@ -17,8 +17,6 @@ export const Content = styled.div`
 
 export const ServiceHover = styled.div`
     width: 100%;
-    height: 250px;
-    background: rgba(1, 1, 1, 0.78);
     color: #fff;
 
     display: none;
@@ -35,6 +33,7 @@ export const Service = styled.div`
     margin-bottom: 45px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 

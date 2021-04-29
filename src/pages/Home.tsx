@@ -6,6 +6,10 @@ import BannerImg from '../assets/banner.png'
 import Nav from '../components/NavComp'
 import { Container, Content } from '../styles/pages/HomeStyled'
 
+
+
+
+
 const Home: React.FC = () => {
     return(
         <>   
@@ -23,6 +27,7 @@ const Home: React.FC = () => {
                 />
 
                 <p>Seja bem vindo ao nosso portfólio, como você já sabe somos a CodeComunity, uma equipe de desenvolvimento de sistemas e design Ux/Ui, focada principalmente no desenvolvimento de sites e todo tipo de sistemas!</p>
+                
             </Content>
             </Container>
         </>
