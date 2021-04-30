@@ -22,6 +22,11 @@ export const Content = styled.div`
         margin-top: 50px;
         text-align: center;
     }
+
+    @media (min-width: 768px){
+        width: 90%;
+
+    }
 `
 
 

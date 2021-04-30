@@ -34,36 +34,22 @@ const Ul = styled.ul<{open: boolean}>`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
+
         <li>
-          <Link href="/home" >Home</Link>
+          <Link href="/home" >Inicio</Link>
         </li> 
         <li>
-          <Link href="/Empresa" > Empresa </Link>
+          <Link href="/Empresa" > Habilidades </Link>
         </li> 
       
         <li>
-          <Link href="/showroom" > Showroom</Link>
+          <Link href="/showroom" > Trabalhos</Link>
         </li> 
      
         <li>
-           <Link href="/Preventiva"> Mecanica Preventiva </Link>
+           <Link href="/Preventiva"> Sobre </Link>
         </li> 
-     
-        <li>
-          <Link href="/Especializada">  Mecanica Especializada</Link> 
-        </li> 
-      
-        <li>
-          <Link href="/Estetica"> Estética automotiva</Link>
-        </li> 
-      
-        <li>
-          <Link href="/Acessorios"> Acessórios automotivos</Link>
-        </li> 
-       
-        <li>
-          <Link href="/Financiamento">Financiamento</Link>
-        </li> 
+
     </Ul>
   )
 }

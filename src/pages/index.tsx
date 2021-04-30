@@ -8,7 +8,7 @@ import { Container } from '../styles/pages/indexStyled'
 const Index: React.FC = () => {
 
   const Router = useRouter()
-  const [count, setCount] = useState(10)
+  const [ count, setCount ] = useState(10)
 
   //Contagem regressiva + redireecionamento
   const Regressive = setInterval(
@@ -22,17 +22,19 @@ const Index: React.FC = () => {
     Router.push("/Home") 
   }
 
+
+
   return (
     <Container>
       <Head>
         <title>Home</title>
       </Head>
       <Logo />
-      <h1>CodeComunity</h1>
-      <p style={{ width: "500px" }}>Olá, somos a CodeCommunity,
-        que tal conhecer nossos trabalhos 
-        e nossas habilidades ?</p>
-      <p style={{ marginTop: "100px" }}>Redirecionando para a nossa página em <span>{count} segundos...</span></p>  
+        <h1>CodeComunity</h1>
+        <p style={{ width: "500px" }}>Olá, somos a CodeCommunity,
+          que tal conhecer nossos trabalhos 
+          e nossas habilidades ?</p>
+        <p style={{ marginTop: "100px" }}>Redirecionando para a nossa página em <span>{count} segundos...</span></p>  
     </Container>
   )
 }

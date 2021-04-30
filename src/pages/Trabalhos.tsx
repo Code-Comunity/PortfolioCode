@@ -33,6 +33,7 @@ const Trabalhos: React.FC<{post:any}> = ({ post }) => {
             <Head>
                 <title>Trabalhos</title>
             </Head>
+            
             <Nav />
 
             <Container>

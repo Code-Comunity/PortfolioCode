@@ -12,6 +12,7 @@ export const NavContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
 `
 export const NavContent = styled.div`
     width: 70%;
@@ -20,6 +21,10 @@ export const NavContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    @media (min-width: 768px) {
+        width: 90%;
+    }
 `
 export const NavLeft = styled.div`
     width: 50%;
@@ -49,7 +54,7 @@ export const NavRight = styled.div`
             color:  ${props => props.theme.colors.primary};
         }
         
-        @media(max-width: 768px){
+        @media (min-width: 768px) {
             display: none;
         }
     }
