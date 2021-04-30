@@ -45,13 +45,13 @@ const InfoTrabalho: React.FC<{post:any}>  = ({ post }) => {
         <>
             <Nav />
             <Container>
-            {post.map((e: any): JSX.Element => (
+      
                 <Content>
                     <h1>Justificativa</h1>
-                    <p>{e.description}</p>
+                    <p>{post[0].description}</p>
 
                     <h1>Descrição do Projeto</h1>
-                    <p>{e.justification}</p>
+                    <p>{post[0].justification}</p>
 
                     <h1>Protótipo/Prints</h1>
 
@@ -83,7 +83,7 @@ const InfoTrabalho: React.FC<{post:any}>  = ({ post }) => {
                     </span>
                     
                 </Content>
-                ))}
+         
             </Container>
         </>
     )

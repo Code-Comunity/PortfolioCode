@@ -22,7 +22,7 @@ export const NavContent = styled.div`
     justify-content: space-between;
     align-items: center;
     
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
         width: 90%;
     }
 `
@@ -54,7 +54,7 @@ export const NavRight = styled.div`
             color:  ${props => props.theme.colors.primary};
         }
         
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             display: none;
         }
     }

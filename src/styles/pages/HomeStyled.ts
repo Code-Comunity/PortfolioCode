@@ -23,7 +23,7 @@ export const Content = styled.div`
         text-align: center;
     }
 
-    @media (min-width: 768px){
+    @media (max-width: 768px){
         width: 90%;
 
     }
