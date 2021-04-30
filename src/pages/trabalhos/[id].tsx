@@ -28,7 +28,6 @@ export const getStaticProps: GetStaticProps = async () => {
     const response = await fetch('https://portfolio-codecommunity.herokuapp.com/api/allPosts')
     const data = await response.json();
     
-    console.log(data)
   
     return {
       props: {
