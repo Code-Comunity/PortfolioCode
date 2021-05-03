@@ -24,7 +24,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/allposts/${id}`)
     const data = await response.json();
     
-    console.log(data)
   
     return {
       props: {
