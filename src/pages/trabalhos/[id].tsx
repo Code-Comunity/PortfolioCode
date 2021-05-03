@@ -41,7 +41,7 @@ const InfoTrabalho: React.FC<{post:any}>  = ({ post }) => {
         <>
             <Nav />
             <Container>
-            {post.map((e): JSX.Element => (
+            {post.map((e:any): JSX.Element => (
                 <Content>
                     <h1>Justificativa</h1>
                     <p>{e.description}</p>
