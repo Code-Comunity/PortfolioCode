@@ -7,14 +7,9 @@ import Image from 'next/image'
 
 import Img1 from '../../assets/teste.png' 
 
-interface IPost{
-    props: {
-        post: string,
-    }
-}
 
 export const getStaticPaths: GetStaticPaths  = async () => {
-    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/allPosts`)
+    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/findpostbyid`)
     const data = await response.json()
 
     const paths = data.map((post: { _id: any }) => ({ params: { id: post._id }, }))
@@ -26,7 +21,7 @@ export const getStaticPaths: GetStaticPaths  = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
 
     const id:any = context.params.id
-    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/allPosts/${id}`)
+    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/findpostbyid/${id}`)
     const data = await response.json();
     
     console.log(data)
