@@ -23,11 +23,13 @@ export const getStaticPaths: GetStaticPaths  = async () => {
 }
 
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async (context) => {
 
-    const response = await fetch('https://portfolio-codecommunity.herokuapp.com/api/allPosts')
+    const id:any = context.params.id
+    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/allPosts/${id}`)
     const data = await response.json();
     
+    console.log(data)
   
     return {
       props: {
@@ -38,19 +40,19 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 
-
+ 
 const InfoTrabalho: React.FC<{post:any}>  = ({ post }) => {
     return(
         <>
             <Nav />
             <Container>
-      
+            {post.map((e): JSX.Element => (
                 <Content>
                     <h1>Justificativa</h1>
-                    <p>{post[0].description}</p>
+                    <p>{e.description}</p>
 
                     <h1>Descrição do Projeto</h1>
-                    <p>{post[0].justification}</p>
+                    <p>{e.justification}</p>
 
                     <h1>Protótipo/Prints</h1>
 
@@ -82,7 +84,7 @@ const InfoTrabalho: React.FC<{post:any}>  = ({ post }) => {
                     </span>
                     
                 </Content>
-         
+                ))}
             </Container>
         </>
     )

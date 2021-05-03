@@ -9,10 +9,11 @@ import { Container } from '../styles/pages/HomeStyled'
 import { Content, Service, ServiceHover } from '../styles/pages/TrabalhosStyled'
 
 import Button from '../components/buttonComp'
+import { GetStaticProps } from 'next'
 
 
 
-export const getStaticProps = async () => {
+export const getStaticProps:GetStaticProps = async () => {
 
     const response = await fetch('https://portfolio-codecommunity.herokuapp.com/api/allPosts')
     const data = await response.json();
