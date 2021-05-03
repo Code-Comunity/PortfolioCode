@@ -9,7 +9,7 @@ import Img1 from '../../assets/teste.png'
 
 
 export const getStaticPaths: GetStaticPaths  = async () => {
-    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/findpostbyid`)
+    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/allposts`)
     const data = await response.json()
 
     const paths = data.map((post: { _id: any }) => ({ params: { id: post._id }, }))
