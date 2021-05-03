@@ -21,7 +21,7 @@ export const getStaticPaths: GetStaticPaths  = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
 
     const id:any = context.params.id
-    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/findpostbyid/${id}`)
+    const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/allposts/${id}`)
     const data = await response.json();
     
     console.log(data)
