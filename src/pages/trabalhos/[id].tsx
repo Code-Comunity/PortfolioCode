@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 
 import Nav from '../../components/NavComp'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import Img1 from '../../assets/teste.png' 
 
@@ -37,6 +38,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
  
 const InfoTrabalho: React.FC<{post:any}>  = ({ post }) => {
+
+    const { isFallback } = useRouter()
+
+    if (isFallback) { return <h1>carregando...</h1> }
+
     return(
         <>
             <Nav />
