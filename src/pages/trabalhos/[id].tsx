@@ -21,6 +21,7 @@ export const getStaticPaths: GetStaticPaths  = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
 
     const id:any = context.params.id
+    
     const response = await fetch(`https://portfolio-codecommunity.herokuapp.com/api/allposts/${id}`)
     const data = await response.json();
     
@@ -43,10 +44,10 @@ const InfoTrabalho: React.FC<{post:any}>  = ({ post }) => {
             {post.map((e:any): JSX.Element => (
                 <Content>
                     <h1>Justificativa</h1>
-                    <p>{e.description}</p>
+                    <p>{e.justification}</p>
 
                     <h1>Descrição do Projeto</h1>
-                    <p>{e.justification}</p>
+                    <p>{e.description}</p>
 
                     <h1>Protótipo/Prints</h1>
 
