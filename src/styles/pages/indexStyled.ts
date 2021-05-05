@@ -32,7 +32,7 @@ export const Content = styled.div`
         text-align: center;
         width: 500px;
 
-        @media (max-width: 320px){
+        @media (max-width: 425px){
             width: 300px;
             font-size: 18px;
         }
@@ -44,7 +44,7 @@ export const Content = styled.div`
         text-align: center;
         color: ${props => props.theme.colors.primary};
 
-        @media (max-width: 320px){
+        @media (max-width: 425px){
             font-size: 18px;
         }
     }

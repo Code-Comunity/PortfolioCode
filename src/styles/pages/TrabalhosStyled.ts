@@ -23,6 +23,10 @@ export const ServiceHover = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @media(max-width: 425px){
+        display: flex;
+    }
 `
 
 export const Service = styled.div`
@@ -37,11 +41,6 @@ export const Service = styled.div`
     justify-content: center;
     align-items: center;
 
-    &:hover{
-        p{
-            display: none;
-        }
-    }
 
     &:hover ${ServiceHover}{
         display: flex;
