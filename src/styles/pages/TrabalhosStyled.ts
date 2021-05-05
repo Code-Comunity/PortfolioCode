@@ -24,7 +24,7 @@ export const ServiceHover = styled.div`
     align-items: center;
     flex-direction: column;
 
-    @media(max-width: 425px){
+    @media(max-width: 768px){
         display: flex;
     }
 `

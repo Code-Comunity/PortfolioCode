@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
     width: 70%;
-    max-width: 1000px;
+    max-width: 1129px;
     min-height: 100vh; 
 
     display: flex; 
@@ -20,7 +20,7 @@ export const Content = styled.div`
 export const ContentBot = styled.div`
     width: 100%;
     min-height: 100vh;
-    max-width: 1000px;
+    max-width: 1129px;
     margin-top: 50px;
 
     display: flex; 

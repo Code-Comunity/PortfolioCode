@@ -17,7 +17,7 @@ export const NavContainer = styled.div`
 export const NavContent = styled.div`
     width: 70%;
     height: 100%;
-    max-width: 1000px;
+    max-width: 1129px;
 
     display: flex;
     justify-content: space-between;
