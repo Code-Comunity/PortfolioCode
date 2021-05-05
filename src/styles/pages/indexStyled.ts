@@ -1,7 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 100vw;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+`
+export const Content = styled.div`
+    width: 75%;
     height: 100vh;
 
     display: flex;
@@ -20,6 +30,12 @@ export const Container = styled.div`
         font-size: 25px;
         line-height: 32px;
         text-align: center;
+        width: 500px;
+
+        @media (max-width: 320px){
+            width: 300px;
+            font-size: 18px;
+        }
     }
 
     span{
@@ -27,5 +43,13 @@ export const Container = styled.div`
         line-height: 32px;
         text-align: center;
         color: ${props => props.theme.colors.primary};
+
+        @media (max-width: 320px){
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 320px){
+        height: 95%;
     }
 `
