@@ -31,7 +31,7 @@ const Index: React.FC = () => {
       </Head>
       <Content>
         <Logo />
-          <h1>CodeComunity</h1>
+          <h1>CodeCommunity</h1>
           <p>Olá, somos a CodeCommunity,
             que tal conhecer nossos trabalhos 
             e nossas habilidades ?</p>
