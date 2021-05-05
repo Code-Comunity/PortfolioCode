@@ -2,18 +2,41 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
     width: 70%;
+    max-width: 1000px;
+    min-height: 100vh; 
 
     display: flex; 
     justify-content: space-between; 
     flex-wrap: wrap;
 
+    @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
 `
 
+export const ContentBot = styled.div`
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1000px;
+    margin-top: 50px;
+
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        align-items: center;
+    } 
+`
+
+
 export const ContentSides = styled.div`
-    width: 50%;
-    min-width: 452px;
+    width: 452px;
     height: 100%;
-    margin-bottom: 30px;
 
     display: flex;
     align-items: center;
@@ -33,5 +56,10 @@ export const ContentSides = styled.div`
     span{
         color: ${props => props.theme.colors.primary};
     }
+
+    @media (max-width: 768px) {
+        width: 85%;
+    } 
+
 `
 

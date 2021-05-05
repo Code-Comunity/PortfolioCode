@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const NavContainer = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 40px;
     position: fixed;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
@@ -17,6 +17,7 @@ export const NavContainer = styled.div`
 export const NavContent = styled.div`
     width: 70%;
     height: 100%;
+    max-width: 1000px;
 
     display: flex;
     justify-content: space-between;
@@ -36,7 +37,7 @@ export const NavLeft = styled.div`
 `
 export const NavRight = styled.div`
     height: 100%;
-    width: 40%;
+    width: 400px;
     text-decoration: none;
     color: #000;
 

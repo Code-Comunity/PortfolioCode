@@ -20,9 +20,10 @@ const Ul = styled.ul<{open: boolean}>`
     right: 0;
     height: 100vh;
     width: 300px;
-    padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     a{
       text-decoration: none;
@@ -36,18 +37,18 @@ const RightNav = ({ open }) => {
     <Ul open={open}>
 
         <li>
-          <Link href="/home" >Inicio</Link>
+          <Link href="/Home" >Inicio</Link>
         </li> 
         <li>
-          <Link href="/Empresa" > Habilidades </Link>
+          <Link href="/Habilidades" > Habilidades </Link>
         </li> 
       
         <li>
-          <Link href="/showroom" > Trabalhos</Link>
+          <Link href="/Trabalhos" > Trabalhos</Link>
         </li> 
      
         <li>
-           <Link href="/Preventiva"> Sobre </Link>
+           <Link href="/Sobre"> Sobre </Link>
         </li> 
 
     </Ul>
